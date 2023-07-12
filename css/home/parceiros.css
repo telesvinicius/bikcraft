@@ -1,0 +1,54 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+.parceiros ul {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto; /*apos crescer mais que 1400px centraliza o conteudo na tela*/
+}
+.parceiros li {
+  display: flex; /*foi colocado como display flax para poder aceitar a magin auto pois inspecionando era visivel que o .svg não estava alinhado*/
+  padding: 32px;
+  border-left: 2px solid var(--cor-2);
+}
+
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
+  /*seleciona o quinto elemento(grade a esquerda)*/
+  border-left: none;
+}
+/*n+5 equivale a falar que os elementos "n" (quantos forem) estão sendo selecionados*/
+.parceiros li:nth-child(n + 5) {
+  border-top: 2px solid var(--cor-2);
+}
+
+.parceiros img {
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .parceiros {
+    padding-bottom: 60px;
+  }
+  .parceiros h2 {
+    padding-bottom: 20px;
+  }
+
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .parceiros li:nth-child(n + 3) {
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(3),
+  .parceiros li:nth-child(7) {
+    /*seleciona o quinto elemento(grade a esquerda)*/
+    border-left: none;
+  }
+}
