@@ -1,0 +1,67 @@
+.introducao_bg {
+  background: var(--cor-12);
+  color: var(--cor-0);
+  box-shadow: inset 0px -120px #ffffff; /*Colocado sombra para dar efeito que a imagem passa do container, mas na verdade existe uma sombra branca onde a imagem esta encima*/
+}
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+}
+.introducao_conteudo {
+  align-self: end;
+  padding-bottom: 200px;
+}
+
+.introducao img {
+  width: 100%; /*garante que não vai crescer mais que 100% da sua largura*/
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  border-radius: 4px;
+}
+
+.introducao_conteudo h1 {
+  margin-bottom: 32px;
+}
+
+/* Não precisa dessa classe pois foi criado uma variável no arquivo cores.css (cor_p1) e colocado a cor do spam no proprio HTML, foi deixado esse codigo aqui comentado como exemplo para estudo*/
+/* .introducao_conteudo h1 span {
+  color: #fbbf00;
+} */
+
+.introducao_conteudo p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .introducao h1 {
+    font-size: 48px;
+  }
+  .introducao p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao_bg {
+    background: var(--cor-11);
+    padding-top: 40px;
+    box-shadow: inset 0px -60px #ffffff;
+  }
+  .introducao {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .introducao_conteudo {
+    padding-bottom: 0px;
+  }
+  .introducao h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  .introducao img {
+    height: 300px;
+    width: 100%;
+  }
+}
