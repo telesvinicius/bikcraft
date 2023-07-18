@@ -1,0 +1,73 @@
+.depoimento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-p1);
+  position: relative;
+  overflow: hidden; /*Qualquer conteudo que for estourar op container ele não mostra a barra de rolagem*/
+}
+.imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*utilizar somente se imagem pode ser cortada*/
+  border-radius: 0px;
+}
+.depoimento_conteudo {
+  padding: 40px 40px 140px 80px;
+  align-self: end;
+}
+
+.depoimento_conteudo p {
+  max-width: 32ch;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 900;
+  margin-bottom: 32px;
+  position: relative;
+}
+.depoimento_conteudo p::before {
+  content: " “ ";
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+  left: -50px;
+  top: -20px;
+}
+.depoimento_conteudo p::after {
+  content: " ” ";
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+/* .depoimento_conteudo::before {
+  content: url(../../img/dec/top-left-p.svg);
+  position: absolute;
+  top: 40px;
+}
+.depoimento_conteudo::after {
+  content: url(../../img/dec/bottom-right-p.svg);
+  padding: auto;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.depoimento_conteudo span {
+  display: block;
+  position: absolute;
+  padding: 30px;
+  top: 180px;
+  right: 20px;
+} */
+@media (max-width: 800px) {
+  .depoimento {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .depoimento_conteudo {
+    padding: 40px 20px;
+    margin: auto;
+  }
+  .depoimento img {
+    max-height: 200px;
+  }
+}
