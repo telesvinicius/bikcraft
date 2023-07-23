@@ -1,5 +1,5 @@
 .introducao_bg {
-  background: var(--cor-12);
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat bottom 160px left 20px;
   color: var(--cor-0);
   box-shadow: inset 0px -120px #ffffff; /*Colocado sombra para dar efeito que a imagem passa do container, mas na verdade existe uma sombra branca onde a imagem esta encima*/
 }
@@ -10,6 +10,7 @@
 }
 .introducao_conteudo {
   align-self: end;
+  padding-top: 120px;
   padding-bottom: 200px;
 }
 
