@@ -3,6 +3,10 @@ body {
   color: #111111;
 }
 img[src$=".jpg"] {
-  /*seletor de atributo:ele vai aplicar a configuração ksomente no codigo htm que tiver "SRC" e tiver ".jpg", ca so eu aplicace a todas as imagem a borda de 4px seria aplicada tambem À logomarca que tambem é uma imagem, porem ela é do tipo svg e nos so vamos aplicar no .jpg usando esse artificio*/
+  /*seletor de atributo:ele vai aplicar a configuração somente no codigo htm que tiver "SRC" e tiver ".jpg", ca so eu aplicace a todas as imagem a borda de 4px seria aplicada tambem À logomarca que tambem é uma imagem, porem ela é do tipo svg e nos so vamos aplicar no .jpg usando esse artificio*/
   border-radius: 4px;
+}
+img{
+  max-width: 100%;
+  max-height: auto; /* Colocando auto ele vai se adequar automaticamente ao max-width*/
 }
